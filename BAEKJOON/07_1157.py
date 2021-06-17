@@ -8,15 +8,13 @@ for x in i: # 입력받은 문자 반복
         a[x] += 1 # 증
     else:
         a[x] = 1 # 없으면 1
-# print(a[x])
-# print(x)
+
 result = 0 # 결과
 count = 0 # 횟수
 
 # 담겨있는 입력값 수 검증하는 반복문
 for x in a: # 입력값 담겨있는 상태의 a 반복하여
     if a[x] > count: # 횟수보다 크다면
-        # count = a[x] # 횟수 변수에 저장
         result = x # 결과값 저장
     elif a[x] == count: # 같다면
         result = '?' # ? 출력
