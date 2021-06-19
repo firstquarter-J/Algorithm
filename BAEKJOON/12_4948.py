@@ -1,3 +1,4 @@
+# 소수 구하기
 # n=100
 #
 # def isPrime(a):
@@ -13,6 +14,7 @@
 #     print(i)
 # sqrt ? 루트
 
+# 에라토스테네스의 체
 # def prime_list(n):
 #     # 에라토스테네스의 체 초기화: n개 요소에 True 설정(소수로 간주)
 #     sieve = [True] * n
@@ -27,13 +29,6 @@
 #     # 소수 목록 산출
 #     return [i for i in range(2, n) if sieve[i] == True]
 
-# 에라토스테네스의 체 ? 에라이
-
-# 입력값 n 시작 2n 종료
-# 시작값 부터 종료값 까지의 소수 구해서 count 변수에 저장
-
-# n = 10
-# n  = int(input())
 
 import math
 
