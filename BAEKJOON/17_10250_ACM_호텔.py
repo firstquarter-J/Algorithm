@@ -7,7 +7,13 @@
 # 입력받은 h 값을 넘어서면 w 값 증가 시켜서 다시 h 값 증가
 # 최종적으로 손님수 n 값이 0일 때 h, w 값 출력
 
-t = int(input())
+t = int(input()) # 테스트 케이스 횟수 입력
 
-for i in range(t):
-    h, w, n = map(int, input().split())
+for i in range(t): # 입력받은 횟수 만큼 반복      # 6 12 10
+    h, w, n = map(int, input().split()) # h 층수 w 방수 n 손님수 입력
+    room = n // h + 1 # 호 수는 사람수를 층수로 나눈 몫+1      # 10 // 6 + 1 = 2
+    floor = n % h # 층 수는 사람수를 층수로 나눈 나머지        # 10 % 6 = 4
+    if n % h == 0: # 사람수가 층 수로 나누어 떨어지면?
+        room = n // h # 호 수는 사람수를 층 수로 나눈 몫
+        floor = h # 층 수는 그대로
+    print(f'{(floor * 100) + room}') # f 스트링 이용하여 층수*100 + room 출력
