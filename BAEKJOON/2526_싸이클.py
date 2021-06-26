@@ -1,14 +1,14 @@
-n = int(input()) # 반복횟수 입력
+# 67 31
+# 67*67 = 4489 % 31 = 25 * 67 = 1675 % 31 = 1 * 67 = 67 % 31 = 5 * 67 = 335 % 31 = 25
+# 25 1 5 25 ...
+n, p = map(int, input().split())
 
-w = [] # 입력받을 문자 넣을 배열 생성
-for _ in range(n): # 입력받은 반복횟수만큼 반복
-    w.append(input()) # 생성해 둔 배열에 붙여주고
+l = [] # 반복되는 숫자 저장할 배열 생성
+r = n # 초기 n 값 저장 + 나머지 저장 할 변수
 
-set = set(w) # set 중복제거, 집합 자료형{}
-list = list(set) # 다시 리스트로 변환
-
-list.sort()
-list.sort(key=len) # 정렬된 리스트 내부 문자열 길이 순으로 다시 정렬
-
-for i in list:
-    print(i)
+while True: # 조건 맞을때까지 무한반복
+    r = (r * n) % p
+    if r in l:
+        print(len(l) - l.index(r)) # 마지막 반복 숫자 인덱스 차감
+        break
+    l.append(r)
