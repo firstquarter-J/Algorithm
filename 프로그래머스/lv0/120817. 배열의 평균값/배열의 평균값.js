@@ -1,6 +1,4 @@
 function solution(numbers) {
-    const answer = numbers.reduce(function add(sum, currentValue){
-        return sum + currentValue
-    }) / numbers.length
+    const answer = numbers.reduce((sum, currentValue) => sum + currentValue, 0) / numbers.length
     return answer;
 }
