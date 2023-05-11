@@ -1,12 +1,5 @@
 function solution(numbers) {
-    var answer = 0;
+    numbers.sort((a,b) => b - a)
     
-    for ( let i = 0; i < numbers.length; i++ ) {
-        let check = numbers[i] * numbers[i+1];
-        if ( answer < check ) {
-            answer = check;
-        }
-    }
-    
-    return answer;
+    return numbers[0] * numbers[1];
 }
