@@ -13,10 +13,15 @@
 //     return answer;
 // }
 
+// function solution(my_string) {
+//     let answer = '';
+    
+//     for (let i of my_string) answer += i === i.toUpperCase() ? i.toLowerCase() : i.toUpperCase();
+    
+//     return answer;
+// }
+
 function solution(my_string) {
-    let answer = '';
-    
-    for (let i of my_string) answer += i === i.toUpperCase() ? i.toLowerCase() : i.toUpperCase();
-    
-    return answer;
+    return [...my_string].map((v) => v === v.toUpperCase() ? v.toLowerCase() : v.toUpperCase()).join('');
 }
+
