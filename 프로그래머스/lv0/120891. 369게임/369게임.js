@@ -9,9 +9,23 @@
 //     return answer;
 // }
 
+// function solution(order) {
+//     console.log((order + '').split(/[369]/))
+//     return (order + '')
+//             .split(/[369]/)
+//             .length - 1;
+// }
+
+// function solution(order) {
+//     return [...order.toString().matchAll(/[3|6|9]/g)].length;
+// }
+
 function solution(order) {
-    console.log((order + '').split(/[369]/))
-    return (order + '')
-            .split(/[369]/)
-            .length - 1;
+    const threeSixNine = new Set([3, 6, 9]);
+    
+    return order
+            .toString()
+            .split('')
+            .filter((x) => threeSixNine.has(Number(x)))
+            .length;
 }
