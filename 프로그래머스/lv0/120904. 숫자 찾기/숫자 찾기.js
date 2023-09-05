@@ -11,6 +11,11 @@
 //     return answer;
 // }
 
+// function solution(num, k) {
+//     return num.toString().split('').map((v) => Number(v)).indexOf(k) + 1 || -1;
+// }
+
 function solution(num, k) {
-    return num.toString().split('').map((v) => Number(v)).indexOf(k) + 1 || -1;
+    const index = ('x' + num).indexOf(k);
+    return index === -1 ? -1 : index;
 }
